@@ -1,5 +1,13 @@
 # ngx_proxy_cache_video
 A patch to make the pseudo-streaming and the proxy cache work together.
+## Installation
+```
+$ curl -L http://nginx.org/download/nginx-1.9.12.tar.gz | tar xz
+$ cd nginx-1.9.12
+$ curl -L https://github.com/roy2220/ngx_proxy_cache_video/raw/master/ngx_proxy_cache_video.patch | patch -p1
+$ ./configure --with-http_mp4_module --with-http_flv_module
+$ make && make install
+```
 ## Additional Directives
 ```
 Syntax: 	proxy_cache_mp4;
