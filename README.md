@@ -33,6 +33,7 @@ http {
 			proxy_pass http://localhost:8081;
 			proxy_cache default;
 			proxy_cache_valid 12h;
+			proxy_cache_key $host$uri;
 		}
 
 		location ~ \.mp4$ {
@@ -41,6 +42,7 @@ http {
 			proxy_pass http://localhost:8081;
 			proxy_cache default;
 			proxy_cache_valid 12h;
+			proxy_cache_key $host$uri;
 		}
 	}
 }
